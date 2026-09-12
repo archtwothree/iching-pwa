@@ -78,13 +78,13 @@ function showResult() {
   const r = HEXAGRAMS[currentResult.relatingNumber];
   $('result-question').textContent = currentQuestion;
   $('primary-symbol').textContent = p.symbol;
-  $('primary-number').textContent = `HEXAGRAM ${p.number}`;
+  $('primary-number').textContent = `HEXAGRAM ${currentResult.primaryNumber}`;
   $('primary-name').textContent = p.name;
   $('primary-lines').innerHTML = currentResult.lines.slice().reverse().map(v=>lineHTML(v,true)).join('');
   $('changing-card').innerHTML = currentResult.changing.length
     ? `<strong>CHANGING LINES</strong><p>${currentResult.changing.map(n=>`Line ${n}`).join(' • ')}</p><small>Red lines are changing lines in this cast.</small>`
     : `<strong>NO CHANGING LINES</strong><p>This is a stable cast. The primary hexagram remains the focus.</p>`;
-  $('relating-card').innerHTML = `<div class="hex-symbol">${r.symbol}</div><div class="hex-number">RELATING HEXAGRAM ${r.number}</div><h2>${r.name}</h2><div class="large-lines">${currentResult.relatingLines.slice().reverse().map(v=>lineHTML(v,true)).join('')}</div>`;
+  $('relating-card').innerHTML = `<div class="hex-symbol">${r.symbol}</div><div class="hex-number">RELATING HEXAGRAM ${currentResult.relatingNumber}</div><h2>${r.name}</h2><div class="large-lines">${currentResult.relatingLines.slice().reverse().map(v=>lineHTML(v,true)).join('')}</div>`;
   $('save-reading').textContent = 'SAVE READING'; $('save-reading').disabled = false;
   show('result-screen');
 }
