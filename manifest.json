@@ -1,0 +1,12 @@
+{
+  "name": "I Ching Oracle",
+  "short_name": "I Ching",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff9dc",
+  "theme_color": "#f7c95c",
+  "description": "A bright, offline-first I Ching coin casting PWA.",
+  "icons": [
+    {"src":"icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
